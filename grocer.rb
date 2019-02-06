@@ -1,5 +1,11 @@
 def consolidate_cart(cart)
-  # code here
+ ecoCart = {}
+ cart.each do |items|
+   items.each do |key, item|
+     ecoCart[key] ||= item
+      ecoCart[key][:count] = ecoCart[key].has_key?(:count) ? ecoCart[key][:count] + 1 : 1
+    end
+  end
 end
 
 def apply_coupons(cart, coupons)
