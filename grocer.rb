@@ -39,7 +39,7 @@ def checkout(cart, coupons)
   apply_clearance(Cart)
   total = 0
   cart.each do |name, properties|
-    properties[:count].times do
+  properties[:count].times do
     total += properties[:price]
     end
    end 
